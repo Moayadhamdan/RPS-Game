@@ -1,34 +1,55 @@
-# Rock-Paper-Scissors Game
+# Rock, Paper, Scissors Game
 
-## Description
-A console application that simulates the classic game of Rock, Paper, Scissors where the player competes against an AI opponent.
+This console application simulates the classic game of Rock, Paper, Scissors where a player competes against an AI opponent.
 
-## Features
-- Single-player mode against an AI
-- AI makes random moves
-- Game continues until one player reaches 3 points
-- Displays round results and current scores
-- Determines and declares the overall winner
+## Project Structure
 
-## How to Play
-1. Run the application.
-2. Enter your move when prompted (rock, paper, or scissors).
-3. The AI will choose its move randomly.
-4. The game will display the winner of each round and update scores.
-5. The game ends when a player reaches 3 points, declaring the winner.
+The project is structured as follows:
 
-## Unit Tests
-Unit tests are provided using xUnit to verify the following:
-- Correct determination of the winner for each round
-- Correct updating of scores
+- **RPSGame**: Contains the main classes and logic for the game.
+  - `Program.cs`: Entry point of the application.
+  - `Player.cs`: Defines the Player class with properties and methods related to the player.
+  - `RPSGame.cs`: Manages the game logic including move comparisons, determining winners, and managing game flow.
+- **RPSGameTests**: Contains Xunit test cases to verify the game logic.
+  - `UnitTest1.cs`: Xunit test cases for testing the game logic including determining winners and updating scores.
+- `README.md`: This file, providing an overview of the project.
 
-## Installation
-1. Clone the repository from GitHub.
-2. Open the project in your preferred IDE.
-3. Run the application.
+## Getting Started
 
-## Usage
-- Simply follow the prompts in the console to play the game.
+### Prerequisites
 
-## License
-This project is licensed under the MIT License.
+- Visual Studio 2022 (or any compatible IDE with C# support)
+- .NET SDK
+
+### Running the Application
+
+1. Clone the repository to your local machine.
+2. Open the solution (`RPSGame.sln`) in Visual Studio.
+3. Set `RPSGame` project as the startup project.
+4. Build and run the application.
+
+### Game Rules
+
+- Each player (you vs AI) chooses either rock, paper, or scissors.
+- The winner of each round is determined based on the following rules:
+  - Rock beats Scissors
+  - Scissors beats Paper
+  - Paper beats Rock
+- The game continues for 3 rounds.
+- The player with the highest score after 3 rounds wins.
+
+### Running Unit Tests
+
+1. Ensure the solution is open in Visual Studio.
+2. Build the solution.
+3. In Visual Studio, go to Test Explorer.
+4. Run all tests to verify the game logic.
+
+## Additional Notes
+
+- The application includes a cheat mode for the AI which predicts the player's move to gain an unfair advantage. This is for demonstration purposes only.
+- Exception handling is implemented to manage any unexpected errors during gameplay.
+- Input validation ensures that players can only choose valid moves (rock, paper, or scissors).
+
+Enjoy playing Rock, Paper, Scissors against the AI!
+
